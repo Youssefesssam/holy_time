@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:holy_time/ui/screens/auth/loginScreen/loginScreen.dart';
+import 'package:holy_time/ui/screens/auth/registerScreen/regsterScreen.dart';
 import 'package:holy_time/ui/screens/homeScreen/homeScreenLeaders.dart';
 import 'package:holy_time/ui/screens/homeScreen/homeScreenUsers.dart';
 import 'package:holy_time/ui/screens/splashScreen/splashScreen.dart';
@@ -17,9 +19,11 @@ class MyApp extends StatelessWidget {
       routes: {
         HomeScreenLeaders.routeName:(_)=>HomeScreenLeaders(),
         HomeScreenUsers.routeName:(_)=>HomeScreenUsers(),
-        SplashScreen.routeName:(_)=>SplashScreen()
+        SplashScreen.routeName:(_)=>SplashScreen(),
+        LoginScreen.routeName:(_)=>LoginScreen(),
+        RegisterScreen.routeName:(_)=>RegisterScreen(),
       },
-      initialRoute:HomeScreenUsers.routeName ,// This trailing comma makes auto-formatting nicer for build methods.
+      initialRoute:SplashScreen.routeName ,// This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }

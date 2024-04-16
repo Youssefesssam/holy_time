@@ -1,11 +1,39 @@
 import 'package:flutter/material.dart';
+import 'package:holy_time/ui/screens/homeScreen/homeScreenUsers.dart';
+import 'package:holy_time/utilites/appAssets.dart';
 
-class SplashScreen extends StatelessWidget {
+import '../auth/loginScreen/loginScreen.dart';
+
+class SplashScreen extends StatefulWidget {
+  static const String routeName = "Splash screen";
   const SplashScreen({super.key});
-  static const String routeName ="splashScreen";
+
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(Duration(seconds: 4), (){
+
+      Navigator.pushReplacementNamed(context, LoginScreen.routeName);
+    });
+
+  }
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Image.asset(AppAssets.splashScreen,fit: BoxFit.cover,),
+          ],
+        ),
+      )
+    );
   }
 }
