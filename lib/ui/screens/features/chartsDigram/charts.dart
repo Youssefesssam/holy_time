@@ -47,13 +47,13 @@ class _ChartsState extends State<Charts> {
                 BarChartRodData(toY: 3, fromY: 0, width: 7, color: Colors.red)
               ]),
               BarChartGroupData(x: 8, barRods: [
-                BarChartRodData(toY: 2, fromY: 0, width: 7, color: Colors.red)
+                BarChartRodData(toY: 1, fromY: 0, width: 7, color: Colors.red)
               ]),
               BarChartGroupData(x: 9, barRods: [
-                BarChartRodData(toY: 2, fromY: 0, width: 7, color: Colors.red)
+                BarChartRodData(toY: 5, fromY: 0, width: 7, color: Colors.red)
               ]),
               BarChartGroupData(x: 10, barRods: [
-                BarChartRodData(toY: 2, fromY: 0, width: 7, color: Colors.red)
+                BarChartRodData(toY: 10, fromY: 0, width: 7, color: Colors.red)
               ]),
 
 

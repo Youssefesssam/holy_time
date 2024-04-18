@@ -64,13 +64,13 @@ class SliderPic extends StatelessWidget {
             child: CarouselSlider(
                 items: pic,
                 options: CarouselOptions(
-                  height: 150,
+                  height: 200,
                   viewportFraction: .5,
                   initialPage: 0,
                   enableInfiniteScroll: true,
                   autoPlay: true,
-                  autoPlayInterval: const Duration(seconds: 2),
-                  autoPlayAnimationDuration: const Duration(seconds: 1),
+                  autoPlayInterval: const Duration(seconds:2),
+                  autoPlayAnimationDuration: const Duration(seconds: 2),
                   autoPlayCurve: Curves.easeInOut,
                   enlargeCenterPage: true,
                   enlargeFactor: 0.3,
