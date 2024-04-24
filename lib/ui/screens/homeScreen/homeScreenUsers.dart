@@ -3,6 +3,7 @@ import 'package:holy_time/ui/screens/features/appBarUser/appBarUser.dart';
 import 'package:holy_time/ui/screens/features/chartsDigram/charts.dart';
 import 'package:holy_time/ui/screens/features/slider/designCard/designCard.dart';
 import '../../../utilites/appAssets.dart';
+import '../features/chartScatter/chartScatter.dart';
 import '../features/slider/slide.dart';
 
 class HomeScreenUsers extends StatelessWidget {
@@ -93,17 +94,17 @@ class HomeScreenUsers extends StatelessWidget {
                   style: TextStyle(fontSize: 20),
                 )),
             const SizedBox(
-              height: 20,
+              height: 10,
             ),
-            const Expanded(flex: 5, child: Charts()),
+            const Expanded(flex: 5, child: ChartScatter()),
             Container(
                 margin: const EdgeInsets.only(left: 20, bottom: 20),
                 child: const Text(
-                  "points",
+                  "Contents",
                   style: TextStyle(fontSize: 25),
                 )),
             Container(
-              margin: EdgeInsets.all(5),
+              margin: EdgeInsets.all(10),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
               ),
@@ -112,17 +113,17 @@ class HomeScreenUsers extends StatelessWidget {
                 children: [
                   Expanded(
                       child: DesignCard(
-                    titleCard: "sss",
+                    titleCard: "points",
                     color: Colors.black,
                   )),
                   Expanded(
-                      child: DesignCard(titleCard: "sss", color: Colors.black)),
+                      child: DesignCard(titleCard: "A Weeekly Word", color: Colors.black)),
                   Expanded(
                       child: DesignCard(titleCard: "sss", color: Colors.black)),
                 ],
               ),
             ),
-            const Spacer(),
+
             SliderPic(),
             const SizedBox(
               height: 20,
