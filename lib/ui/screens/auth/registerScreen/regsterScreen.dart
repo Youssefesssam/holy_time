@@ -24,16 +24,16 @@ class _RegisterScreenState extends State<RegisterScreen> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Image.asset(AppAssets.registerScreen1),
-            Padding(
+            const Padding(
               padding: EdgeInsets.only(left: 30, top: 20),
               child: Text(
                 "Register",
                 style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 30),
+              margin: const EdgeInsets.symmetric(horizontal: 30),
               child: Column(
                 children: [
                   TextField(
@@ -46,7 +46,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   TextField(
                     decoration: InputDecoration(
                       labelText: "Email",
@@ -57,7 +57,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   TextField(
                     decoration: InputDecoration(
                       labelText: "Password",
@@ -69,7 +69,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     ),
                     obscureText: true,
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   TextField(
                     decoration: InputDecoration(
                       labelText: "Confirm Password",
@@ -81,7 +81,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     ),
                     obscureText: true,
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   TextField(
                     decoration: InputDecoration(
                       labelText: "Address",
@@ -92,7 +92,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   TextFormField(
                     controller: _birthdayController,
                     readOnly: true,
@@ -111,13 +111,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     decoration: InputDecoration(
                       labelText: "Birth day",
                       hintText: "Select your birth day",
-                      suffixIcon: Icon(Icons.cake),
+                      suffixIcon: const Icon(Icons.cake),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(20),
                       ),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   TextField(
                     decoration: InputDecoration(
                       labelText: "Phone Number",
@@ -128,7 +128,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   TextField(
                     decoration: InputDecoration(
                       labelText: "Talent",
@@ -139,7 +139,18 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
+                  TextField(
+                    decoration: InputDecoration(
+                      labelText: "university",
+                      hintText: "Enter your university",
+                      suffixIcon: const Icon(Icons.school_rounded),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 20),
                   DropdownButtonFormField<String>(
                     value: _selectedGender,
                     onChanged: (value) {
@@ -154,21 +165,21 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       ),
                     ),
                     items: [
-                      DropdownMenuItem(
+                      const DropdownMenuItem(
                         value: "male",
                         child: Text("Male"),
                       ),
-                      DropdownMenuItem(
+                      const DropdownMenuItem(
                         value: "female",
                         child: Text("Female"),
                       ),
-                      DropdownMenuItem(
+                      const DropdownMenuItem(
                         value: "other",
                         child: Text("Other"),
                       ),
                     ],
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   InkWell(
                     onTap: () {
                       Navigator.pushReplacementNamed(
@@ -177,13 +188,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       );
                     },
                     child: Container(
-                      padding: EdgeInsets.all(10),
-                      margin: EdgeInsets.all(20),
+                      padding: const EdgeInsets.all(10),
+                      margin: const EdgeInsets.all(20),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(40),
                         color: Colors.blue,
                       ),
-                      child: Text(
+                      child: const Text(
                         "Create",
                         textAlign: TextAlign.center,
                         style: TextStyle(fontSize: 30, color: Colors.white),

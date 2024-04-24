@@ -26,34 +26,34 @@ class _ChartsState extends State<Charts> {
             groupsSpace: 10,
             barGroups: [
               BarChartGroupData(x: 1, barRods: [
-                BarChartRodData(toY: 5, fromY: 0, width: 7, color: Colors.red)
+                BarChartRodData(toY: 5, fromY: 0, width: 7, color: Colors.green)
               ]),
               BarChartGroupData(x: 2, barRods: [
-                BarChartRodData(toY: 1, fromY: 0, width: 7, color: Colors.red)
+                BarChartRodData(toY: 1, fromY: 0, width: 7, color: Colors.green)
               ]),
               BarChartGroupData(x: 3, barRods: [
-                BarChartRodData(toY: 2, fromY: 0, width: 7, color: Colors.red)
+                BarChartRodData(toY: 2, fromY: 0, width: 7, color: Colors.green)
               ]),
               BarChartGroupData(x: 4, barRods: [
-                BarChartRodData(toY: 6, fromY: 0, width: 7, color: Colors.red)
+                BarChartRodData(toY: 6, fromY: 0, width: 7, color: Colors.green)
               ]),
               BarChartGroupData(x: 5, barRods: [
-                BarChartRodData(toY: 5, fromY: 0, width: 7, color: Colors.red)
+                BarChartRodData(toY: 5, fromY: 0, width: 7, color: Colors.green)
               ]),
               BarChartGroupData(x: 6, barRods: [
-                BarChartRodData(toY: 4, fromY: 0, width: 7, color: Colors.red)
+                BarChartRodData(toY: 4, fromY: 0, width: 7, color: Colors.green)
               ]),
               BarChartGroupData(x: 7, barRods: [
-                BarChartRodData(toY: 3, fromY: 0, width: 7, color: Colors.red)
+                BarChartRodData(toY: 3, fromY: 0, width: 7, color: Colors.green)
               ]),
               BarChartGroupData(x: 8, barRods: [
-                BarChartRodData(toY: 1, fromY: 0, width: 7, color: Colors.red)
+                BarChartRodData(toY: 1, fromY: 0, width: 7, color: Colors.green)
               ]),
               BarChartGroupData(x: 9, barRods: [
-                BarChartRodData(toY: 5, fromY: 0, width: 7, color: Colors.red)
+                BarChartRodData(toY: 5, fromY: 0, width: 7, color: Colors.green)
               ]),
               BarChartGroupData(x: 10, barRods: [
-                BarChartRodData(toY: 10, fromY: 0, width: 7, color: Colors.red)
+                BarChartRodData(toY: 10, fromY: 0, width: 7, color: Colors.green)
               ]),
 
 

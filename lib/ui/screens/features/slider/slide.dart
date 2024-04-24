@@ -1,5 +1,9 @@
+
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:holy_time/ui/screens/features/slider/event/event.dart';
+
+import 'designCard/designCard.dart';
 
 
 class SliderPic extends StatelessWidget {
@@ -7,65 +11,24 @@ class SliderPic extends StatelessWidget {
   static const String routeName ="sliderPic";
 
   List<Widget> pic =[
-
-    Card(
-      elevation: 10,
-      child: Container(
-        width: 200,
-        color: const Color(0xff9d9d9d),
-        child:const Text("event",
-          style: TextStyle(
-              color: Colors.white,
-              fontSize: 20,
-              fontWeight: FontWeight.bold
-          ),
-          textAlign:TextAlign.center,
-        ) ,
-      ),
-    ),
-    Card(
-      elevation: 10,
-      child: Container(
-        width: 200,
-        color: const Color(0xff9d9d9d),
-        child:const Text("Teem",
-          style: TextStyle(
-              color: Colors.white,
-              fontSize: 20,
-              fontWeight: FontWeight.bold
-          ),
-          textAlign:TextAlign.center,
-        ) ,
-      ),
-    ),
-    Card(
-      elevation: 10,
-      child: Container(
-        width: 200,
-        color: const Color(0xff9d9d9d),
-        child:const Text("Task",
-          style: TextStyle(
-              color: Colors.white,
-              fontSize: 20,
-              fontWeight: FontWeight.bold
-          ),
-          textAlign:TextAlign.center,
-        ) ,
-      ),
-    ),
-   ];
+    DesignCard(titleCard: "event", color: Colors.black,),
+    DesignCard(titleCard: "task", color: Colors.black,),
+    DesignCard(titleCard: "teem", color: Colors.black,),
+  ];
   final CarouselController _carouselController = CarouselController();
   @override
   Widget build(BuildContext context) {
     return Column(
         children: [
           InkWell(
-            onTap: () {},
+            onTap: () {
+              Navigator.pushNamed(context, EventScreen.routeName);
+            },
             child: CarouselSlider(
                 items: pic,
                 options: CarouselOptions(
                   height: 200,
-                  viewportFraction: .5,
+                  viewportFraction: .4,
                   initialPage: 0,
                   enableInfiniteScroll: true,
                   autoPlay: true,

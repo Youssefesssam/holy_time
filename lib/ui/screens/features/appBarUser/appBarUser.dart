@@ -1,24 +1,25 @@
 import 'package:flutter/material.dart';
 
 import '../../../../utilites/appAssets.dart';
+import '../setting/setting.dart';
 
 class AppBarUser extends StatelessWidget {
   const AppBarUser({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return  Column(
       children: [
         Row(
           children: [
-            CircleAvatar(
+            const CircleAvatar(
               radius: 25,
               backgroundImage: AssetImage(AppAssets.splashScreen),
             ),
-            SizedBox(
+            const SizedBox(
               width: 7,
             ),
-            Column(
+            const Column(
               children: [
                 Text(
                   "Name",
@@ -30,12 +31,15 @@ class AppBarUser extends StatelessWidget {
                 ),
               ],
             ),
-            Spacer(),
+            const Spacer(),
             Row(
               children: [
-                Icon(Icons.qr_code_2_sharp),
-                SizedBox(width: 5,),
-                Icon(Icons.settings),
+                InkWell(onTap: (){},child: const Icon(Icons.qr_code_2_sharp,size: 35,)),
+                const SizedBox(width: 5,),
+                 InkWell(onTap:(){
+                   Navigator.pushNamed(context, Setting.routeName);
+                   },
+                     child: Icon(Icons.settings,size: 35,)),
               ],
             )
           ],
