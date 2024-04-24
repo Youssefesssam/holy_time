@@ -31,7 +31,7 @@ class SliderPic extends StatelessWidget {
                   viewportFraction: .4,
                   initialPage: 0,
                   enableInfiniteScroll: true,
-                  autoPlay: true,
+                  autoPlay: false,
                   autoPlayInterval: const Duration(seconds:2),
                   autoPlayAnimationDuration: const Duration(seconds: 2),
                   autoPlayCurve: Curves.easeInOut,

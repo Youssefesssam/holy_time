@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:holy_time/ui/screens/features/appBarUser/appBarUser.dart';
-import 'package:holy_time/ui/screens/features/chartsDigram/charts.dart';
 import 'package:holy_time/ui/screens/features/slider/designCard/designCard.dart';
 import '../../../utilites/appAssets.dart';
 import '../features/chartScatter/chartScatter.dart';
@@ -96,7 +95,7 @@ class HomeScreenUsers extends StatelessWidget {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
               ),
-              height: 100,
+              height: MediaQuery.of(context).size.height*.13,
               child: Row(
                 children: [
                   Expanded(
