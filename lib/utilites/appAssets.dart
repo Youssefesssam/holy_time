@@ -19,7 +19,7 @@ static const String reward = 'assets/icons/reward.png';
 static const String star = 'assets/icons/star.png';
 static const String success = 'assets/icons/success.png';
 static const String user = 'assets/icons/user.png';
-static const String user2 = 'assets/icons/user(1).png';
+static const String user2 = 'assets/icons/user2.png';
 static const String verifiedUser = 'assets/icons/verified-user.png';
 
 }
