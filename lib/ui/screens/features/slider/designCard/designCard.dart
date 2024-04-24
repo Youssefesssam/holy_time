@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class DesignCard extends StatelessWidget {
   String titleCard="";
-  Color color;
+  Color color =Colors.white;
    DesignCard({super.key,  required this.titleCard,required this.color});
 
   @override
@@ -15,13 +15,14 @@ class DesignCard extends StatelessWidget {
           child: Card(
               elevation: 20,
               child:Container(
-                color: color ,
+                color: Colors.white ,
               )
           ),
         ),
-         Text(titleCard,
-          style: const TextStyle(
-              color: Colors.white,
+         Text(
+           titleCard,
+          style:  TextStyle(
+              color: color,
               fontSize: 20,
               fontWeight: FontWeight.bold
           ),

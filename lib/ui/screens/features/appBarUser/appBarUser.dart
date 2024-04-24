@@ -14,7 +14,7 @@ class AppBarUser extends StatelessWidget {
           children: [
             const CircleAvatar(
               radius: 25,
-              backgroundImage: AssetImage(AppAssets.splashScreen),
+              backgroundImage: AssetImage(AppAssets.profile),
             ),
             const SizedBox(
               width: 7,

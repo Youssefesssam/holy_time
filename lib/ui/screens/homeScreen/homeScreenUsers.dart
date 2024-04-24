@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:holy_time/ui/screens/features/appBarUser/appBarUser.dart';
 import 'package:holy_time/ui/screens/features/chartsDigram/charts.dart';
 import 'package:holy_time/ui/screens/features/slider/designCard/designCard.dart';
-import 'package:holy_time/utilites/appAssets.dart';
+import '../../../utilites/appAssets.dart';
 import '../features/slider/slide.dart';
 
 class HomeScreenUsers extends StatelessWidget {
@@ -15,9 +15,10 @@ class HomeScreenUsers extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.transparent,
       body: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(image: AssetImage(AppAssets.backgrond2),fit: BoxFit.fill)
-        ),
+        decoration: const BoxDecoration(
+            image: DecorationImage(
+          image: AssetImage(AppAssets.backGround),fit: BoxFit.fill
+        )),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
@@ -26,18 +27,20 @@ class HomeScreenUsers extends StatelessWidget {
                     left: 30, right: 30, top: 30, bottom: 10),
                 child: const AppBarUser()),
             Container(
-
                 margin: const EdgeInsets.only(left: 30),
                 child: Row(
                   children: [
                     const Text(
                       "Rank#",
-                      style: TextStyle(fontSize: 20),
+                      style: TextStyle(fontSize: 25),
                     ),
                     const Spacer(),
                     Container(
                       margin: const EdgeInsets.only(right: 30),
-                      child: const Text("I attended", style: TextStyle(fontSize: 20),),
+                      child: const Text(
+                        "I attended",
+                        style: TextStyle(fontSize: 25),
+                      ),
                     )
                   ],
                 )),
@@ -46,21 +49,18 @@ class HomeScreenUsers extends StatelessWidget {
               child: Row(
                 children: [
                   Expanded(
-                    child: Card(
-                      child: Container(
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                          color: const Color(0xffffba00),
-                        ),
-                        height: 50,
-                        width: 50,
-
-                        child: const Center(
-                            child: Text(
-                          '1#',
-                          style: TextStyle(color: Colors.white, fontSize: 25),
-                        )),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: const Color(0xffffba00),
                       ),
+                      height: 50,
+                      width: 50,
+                      child: const Center(
+                          child: Text(
+                        '1#',
+                        style: TextStyle(color: Colors.white, fontSize: 25),
+                      )),
                     ),
                   ),
                   const Spacer(),
@@ -97,24 +97,28 @@ class HomeScreenUsers extends StatelessWidget {
             ),
             const Expanded(flex: 5, child: Charts()),
             Container(
-                margin: const EdgeInsets.only(left: 20,bottom: 20),
+                margin: const EdgeInsets.only(left: 20, bottom: 20),
                 child: const Text(
                   "points",
-                  style: TextStyle(fontSize: 20),
+                  style: TextStyle(fontSize: 25),
                 )),
             Container(
-              margin:EdgeInsets.all(5),
-                decoration:BoxDecoration(borderRadius: BorderRadius.circular(20),),
+              margin: EdgeInsets.all(5),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+              ),
               height: 100,
               child: Row(
                 children: [
                   Expanded(
-                  child: DesignCard(titleCard: "sss",color: Colors.black,)),
+                      child: DesignCard(
+                    titleCard: "sss",
+                    color: Colors.black,
+                  )),
                   Expanded(
-                      child: DesignCard(titleCard: "sss",color: Colors.black)),
+                      child: DesignCard(titleCard: "sss", color: Colors.black)),
                   Expanded(
-                      child: DesignCard(titleCard: "sss",color: Colors.black)),
-
+                      child: DesignCard(titleCard: "sss", color: Colors.black)),
                 ],
               ),
             ),
