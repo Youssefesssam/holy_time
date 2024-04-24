@@ -49,39 +49,27 @@ class HomeScreenUsers extends StatelessWidget {
               margin: const EdgeInsets.only(left: 30, top: 10),
               child: Row(
                 children: [
-                  Expanded(
-                    child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: const Color(0xffffba00),
-                      ),
-                      height: 50,
-                      width: 50,
-                      child: const Center(
-                          child: Text(
-                        '1#',
-                        style: TextStyle(color: Colors.white, fontSize: 25),
-                      )),
-                    ),
+                  Container(
+                      color: const Color(0xffffba00),
+                    height: 50,
+                    width: 70,
+                    child: const Center(
+                        child: Text(
+                      '1#',
+                      style: TextStyle(color: Colors.white, fontSize: 25),
+                    )),
                   ),
                   const Spacer(),
                   Container(
-                    margin: const EdgeInsets.only(right: 30),
-                    child: Expanded(
-                      child: Card(
-                        elevation: 10,
-                        child: Container(
-                          height: 50,
-                          width: 70,
-                          color: const Color(0xffee0000),
-                          child: const Center(
-                              child: Text(
-                            '5%',
-                            style: TextStyle(color: Colors.white, fontSize: 25),
-                          )),
-                        ),
-                      ),
-                    ),
+                    margin: const EdgeInsets.only(right: 30, top: 10),
+                    height: 50,
+                    width: 70,
+                    color: const Color(0xffee0000),
+                    child: const Center(
+                        child: Text(
+                      '5%',
+                      style: TextStyle(color: Colors.white, fontSize: 25),
+                    )),
                   )
                 ],
               ),
@@ -112,22 +100,23 @@ class HomeScreenUsers extends StatelessWidget {
               child: Row(
                 children: [
                   Expanded(
+                      flex:1,
                       child: DesignCard(
                     titleCard: "points",
                     color: Colors.black,
                   )),
                   Expanded(
+                    flex: 1,
                       child: DesignCard(titleCard: "A Weeekly Word", color: Colors.black)),
                   Expanded(
+                    flex: 1,
                       child: DesignCard(titleCard: "sss", color: Colors.black)),
                 ],
               ),
             ),
 
             SliderPic(),
-            const SizedBox(
-              height: 20,
-            )
+
           ],
         ),
       ),
