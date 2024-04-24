@@ -63,7 +63,7 @@ class HomeScreenUsers extends StatelessWidget {
                     margin: const EdgeInsets.only(right: 30, top: 10),
                     height: 50,
                     width: 70,
-                    color: const Color(0xffee0000),
+                    color: const Color(0xeaf84c4c),
                     child: const Center(
                         child: Text(
                       '5%',
