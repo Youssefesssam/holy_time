@@ -126,7 +126,7 @@ class HomeScreenUsers extends StatelessWidget {
                   Expanded(
                       flex: 1,
                       child: DesignCard(
-                        titleCard: "points",
+                        titleCard: "Score",
                         path:AppAssets.bestScore,
                         color: Colors.black,
                       )),
