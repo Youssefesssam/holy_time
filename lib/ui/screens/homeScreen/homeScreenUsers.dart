@@ -24,55 +24,44 @@ class HomeScreenUsers extends StatelessWidget {
           children: [
             Container(
                 margin: const EdgeInsets.only(
-                    left: 30, right: 30, top: 30, bottom: 10),
+                    left: 30, right: 30, top: 30, bottom: 20),
+
                 child: const AppBarUser()),
-            Container(
-                margin: const EdgeInsets.only(left: 30),
-                child: Row(
-                  children: [
-                    const Text(
-                      "Rank#",
-                      style: TextStyle(fontSize: 25),
-                    ),
-                    const Spacer(),
-                    Container(
-                      margin: const EdgeInsets.only(right: 30),
-                      child: const Text(
-                        "I attended",
-                        style: TextStyle(fontSize: 25),
-                      ),
-                    )
-                  ],
-                )),
-            Container(
-              margin: const EdgeInsets.only(left: 30, top: 10),
-              child: Row(
-                children: [
-                  Container(
-                      color: const Color(0xffffba00),
-                    height: 50,
-                    width: 70,
-                    child: const Center(
-                        child: Text(
-                      '1#',
-                      style: TextStyle(color: Colors.white, fontSize: 25),
+
+            Opacity(
+              opacity: .5,
+              child: Card(
+                margin: const EdgeInsets.only(left: 60,right: 60),                borderOnForeground: true,
+                semanticContainer: true,
+                elevation: 10,
+                child: Container(
+                  padding: EdgeInsets.all(10),
+
+                    child: const Row(
+                      children: [
+                        Column(
+                          children: [
+                            Text("1#",style: TextStyle(fontSize: 45),),
+                           SizedBox(height: 5,),
+                            Text("Rank#"),
+                          ],
+                        ),
+                        Spacer(),
+                        Column(
+                          children: [
+                            Text("5%",style: TextStyle(fontSize: 45)),
+                            SizedBox(height: 5,),
+                            Text("I attentent"),
+                          ],
+                        ),
+
+
+
+                      ],
                     )),
-                  ),
-                  const Spacer(),
-                  Container(
-                    margin: const EdgeInsets.only(right: 30, top: 10),
-                    height: 50,
-                    width: 70,
-                    color: const Color(0xeaf84c4c),
-                    child: const Center(
-                        child: Text(
-                      '5%',
-                      style: TextStyle(color: Colors.white, fontSize: 25),
-                    )),
-                  )
-                ],
               ),
             ),
+
             Container(
                 margin: const EdgeInsets.only(top: 10, left: 30),
                 child: const Text(
