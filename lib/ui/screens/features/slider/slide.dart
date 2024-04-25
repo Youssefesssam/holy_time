@@ -13,7 +13,7 @@ class SliderPic extends StatelessWidget {
 
   List<Widget> pic =[
     DesignCard(titleCard: "event", color: Colors.black,path: AppAssets.banner,),
-    DesignCard(titleCard: "task", color: Colors.black,path: AppAssets.check),
+    DesignCard(titleCard: "task", color: Colors.black,path: AppAssets.clipboard),
     DesignCard(titleCard: "teem", color: Colors.black,path: AppAssets.teem),
   ];
   final CarouselController _carouselController = CarouselController();

@@ -26,4 +26,5 @@ static const String banner = 'assets/icons/banner.png';
 static const String event = 'assets/icons/event.png';
 static const String approve = 'assets/icons/approve.png';
 static const String clipboard = 'assets/icons/clipboard.png';
+static const String days = 'assets/icons/days.png';
 }

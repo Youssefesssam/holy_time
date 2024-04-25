@@ -83,20 +83,19 @@ class HomeScreenUsers extends StatelessWidget {
                 ],
               ),
             ),
-            Row(
-              children: [
-                Container(
-                    margin: const EdgeInsets.only(top: 10, left: 30),
-                    child: const Text(
-                      "Range attendas",
-                      textAlign: TextAlign.start,
-                      style: TextStyle(fontSize: 20),
-                    )),
-                Container(
-                    margin: const EdgeInsets.only(left: 5, bottom: 20),
-                    child: Image.asset("assets/icons/content.png",height: 30,width: 40,))
-              ],
+            Container(
+              margin: const EdgeInsets.only(top: 10, left: 30),
+              child: Row(
+                children: [
+                  const Text(
+                    "Range attendas",
+                    textAlign: TextAlign.start,
+                    style: TextStyle(fontSize: 20),
+                  ),
+                  Image.asset(AppAssets.immigration,height: 30,width: 40,)
+                ],
 
+              ),
             ),
 
             const SizedBox(
@@ -134,7 +133,7 @@ class HomeScreenUsers extends StatelessWidget {
                   Expanded(
                       flex: 1,
                       child: DesignCard(
-                          titleCard: "A Word", color: Colors.black,path: AppAssets.processing,)),
+                          titleCard: "A Word", color: Colors.black,path: AppAssets.days,)),
                   Expanded(
                       flex: 1,
                       child: DesignCard(
