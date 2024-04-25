@@ -2,6 +2,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:holy_time/ui/screens/features/slider/event/event.dart';
+import 'package:holy_time/utilites/appAssets.dart';
 
 import 'designCard/designCard.dart';
 
@@ -11,9 +12,9 @@ class SliderPic extends StatelessWidget {
   static const String routeName ="sliderPic";
 
   List<Widget> pic =[
-    DesignCard(titleCard: "event", color: Colors.black,),
-    DesignCard(titleCard: "task", color: Colors.black,),
-    DesignCard(titleCard: "teem", color: Colors.black,),
+    DesignCard(titleCard: "event", color: Colors.black,path: AppAssets.banner,),
+    DesignCard(titleCard: "task", color: Colors.black,path: AppAssets.check),
+    DesignCard(titleCard: "teem", color: Colors.black,path: AppAssets.teem),
   ];
   final CarouselController _carouselController = CarouselController();
   @override

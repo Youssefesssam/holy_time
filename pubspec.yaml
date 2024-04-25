@@ -82,6 +82,11 @@ flutter:
     - assets/icons/reward.png
     - assets/icons/rank.png
     - assets/icons/processing.png
+    - assets/icons/teem.png
+    - assets/icons/banner.png
+    - assets/icons/event.png
+    - assets/icons/approve.png
+    - assets/icons/clipboard.png
 
 
 

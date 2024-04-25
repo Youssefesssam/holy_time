@@ -20,7 +20,7 @@ class _ChartScatterState extends State<ChartScatter> {
       child: Column(
         children: [
           Container(
-            height: MediaQuery.of(context).size.height*.25,
+            height: MediaQuery.of(context).size.height*.24,
             child: AspectRatio(
               aspectRatio: 16/9,
 
@@ -34,7 +34,7 @@ class _ChartScatterState extends State<ChartScatter> {
                 ),
                 groupList: [
 
-                  OrdinalGroup(id: '5',
+                  OrdinalGroup(id: '1',
                       chartType: ChartType.scatterPlot,color: Color(0xfffdb900),
                       data: [
                         OrdinalData(domain: 'Mon', measure: 3.5),
