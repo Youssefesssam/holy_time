@@ -83,13 +83,22 @@ class HomeScreenUsers extends StatelessWidget {
                 ],
               ),
             ),
-            Container(
-                margin: const EdgeInsets.only(top: 10, left: 30),
-                child: const Text(
-                  "Range attendas",
-                  textAlign: TextAlign.start,
-                  style: TextStyle(fontSize: 20),
-                )),
+            Row(
+              children: [
+                Container(
+                    margin: const EdgeInsets.only(top: 10, left: 30),
+                    child: const Text(
+                      "Range attendas",
+                      textAlign: TextAlign.start,
+                      style: TextStyle(fontSize: 20),
+                    )),
+                Container(
+                    margin: const EdgeInsets.only(left: 5, bottom: 20),
+                    child: Image.asset("assets/icons/content.png",height: 30,width: 40,))
+              ],
+
+            ),
+
             const SizedBox(
               height: 10,
             ),
@@ -104,7 +113,7 @@ class HomeScreenUsers extends StatelessWidget {
                     )),
                 Container(
                     margin: const EdgeInsets.only(left: 5, bottom: 20),
-                    child: Image.asset("assets/icons/content.png",height: 30,width: 40,))
+                    child: Image.asset(AppAssets.content,height: 30,width: 40,))
               ],
             ),
             Container(
@@ -119,18 +128,18 @@ class HomeScreenUsers extends StatelessWidget {
                       flex: 1,
                       child: DesignCard(
                         titleCard: "points",
-                        path:"assets/icons/best-score.png",
+                        path:AppAssets.bestScore,
                         color: Colors.black,
                       )),
                   Expanded(
                       flex: 1,
                       child: DesignCard(
-                          titleCard: "A Weeekly Word", color: Colors.black)),
+                          titleCard: "A Word", color: Colors.black,path: AppAssets.processing,)),
                   Expanded(
                       flex: 1,
                       child: DesignCard(
-                          path:"assets/icons/best-score.png",
-                          titleCard: "sss", color: Colors.black)),
+                          path:AppAssets.giveAway,
+                          titleCard: "Gift", color: Colors.black)),
                 ],
               ),
             ),
