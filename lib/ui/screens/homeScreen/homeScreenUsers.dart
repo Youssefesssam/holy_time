@@ -36,7 +36,6 @@ class HomeScreenUsers extends StatelessWidget {
                 elevation: 10,
                 child: Container(
                   padding: EdgeInsets.all(10),
-
                     child: const Row(
                       children: [
                         Column(
