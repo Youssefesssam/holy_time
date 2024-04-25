@@ -18,17 +18,19 @@ class _ChartScatterState extends State<ChartScatter> {
     return Container(
       padding: const EdgeInsets.all(10),
       child: Column(
-          children: [
-        AspectRatio(
-        aspectRatio: 16/9,
+        children: [
+          Container(
+            height: MediaQuery.of(context).size.height*.25,
+            child: AspectRatio(
+              aspectRatio: 16/9,
 
               child: DChartComboO(
                 configRenderPoint: ConfigRenderPoint(
-                  radiusPx: 3,
-                  strokeWidthPx: 10,
-                  symbolRender: SymbolRenderCircle(
-                    isSolid: true,
-                  )
+                    radiusPx: 3,
+                    strokeWidthPx: 10,
+                    symbolRender: SymbolRenderCircle(
+                      isSolid: true,
+                    )
                 ),
                 groupList: [
 
@@ -44,8 +46,9 @@ class _ChartScatterState extends State<ChartScatter> {
                         OrdinalData(domain: 'sat', measure: 6.5),
                       ])
                 ],
-              ),)
-          ],
+              ),),
+          )
+        ],
 
       ),
     );

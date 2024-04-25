@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:holy_time/ui/screens/homeScreen/homeScreenUsers.dart';
 import 'package:holy_time/utilites/appAssets.dart';
 
 import '../auth/loginScreen/loginScreen.dart';
@@ -17,7 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 4), (){
+    Future.delayed(const Duration(seconds: 4), (){
 
       Navigator.pushReplacementNamed(context, LoginScreen.routeName);
     });
@@ -27,13 +26,14 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Image.asset(AppAssets.splashScreen,fit: BoxFit.cover,),
+            Expanded(
+              child: Image.asset(AppAssets.splashScreen, fit: BoxFit.fill,),
+            ),
           ],
-        ),
-      )
+        )
     );
   }
 }
