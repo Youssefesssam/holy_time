@@ -22,16 +22,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       routes: {
-        HomeScreenLeaders.routeName:(_)=>HomeScreenLeaders(),
-        HomeScreenUsers.routeName:(_)=>HomeScreenUsers(),
-        SplashScreen.routeName:(_)=>SplashScreen(),
-        LoginScreen.routeName:(_)=>LoginScreen(),
-        RegisterScreen.routeName:(_)=>RegisterScreen(),
-        Charts.routeName:(_)=>Charts(),
-        Setting.routeName:(_)=>Setting(),
-        EventScreen.routeName:(_)=>EventScreen(),
-        TeemScreen.routeName:(_)=>TeemScreen(),
-        TaskScreen.routeName:(_)=>TaskScreen(),
+        HomeScreenLeaders.routeName:(_)=>const HomeScreenLeaders(),
+        HomeScreenUsers.routeName:(_)=>const HomeScreenUsers(),
+        SplashScreen.routeName:(_)=>const SplashScreen(),
+        LoginScreen.routeName:(_)=>const LoginScreen(),
+        RegisterScreen.routeName:(_)=>const RegisterScreen(),
+        Charts.routeName:(_)=>const Charts(),
+        Setting.routeName:(_)=>const Setting(),
+        EventScreen.routeName:(_)=>const EventScreen(),
+        TeemScreen.routeName:(_)=>const TeemScreen(),
+        TaskScreen.routeName:(_)=>const TaskScreen(),
       },
       initialRoute:SplashScreen.routeName ,// This trailing comma makes auto-formatting nicer for build methods.
     );
