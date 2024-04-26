@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:holy_time/ui/screens/features/appBarUser/appBarUser.dart';
-import 'package:holy_time/ui/screens/features/slider/designCard/designCard.dart';
+
 import '../../../utilites/appAssets.dart';
-import '../features/chartScatter/chartScatter.dart';
-import '../features/slider/slide.dart';
+import '../features/featuresHomeScreenUsers/appBarUser/appBarUser.dart';
+import '../features/featuresHomeScreenUsers/chartScatter/chartScatter.dart';
+import '../features/featuresHomeScreenUsers/slider/designCard/designCard.dart';
+import '../features/featuresHomeScreenUsers/slider/slide.dart';
+
 
 class HomeScreenUsers extends StatelessWidget {
   const HomeScreenUsers({super.key});
@@ -92,7 +94,7 @@ class HomeScreenUsers extends StatelessWidget {
                     textAlign: TextAlign.start,
                     style: TextStyle(fontSize: 20),
                   ),
-                  Image.asset(AppAssets.immigration,height: 30,width: 40,)
+                  Image.asset(AppAssets.rank,height: 30,width: 40,)
                 ],
 
               ),
@@ -116,7 +118,7 @@ class HomeScreenUsers extends StatelessWidget {
               ],
             ),
             Container(
-              margin: EdgeInsets.all(10),
+              margin: const EdgeInsets.all(10),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
               ),

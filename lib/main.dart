@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:holy_time/ui/screens/auth/loginScreen/loginScreen.dart';
 import 'package:holy_time/ui/screens/auth/registerScreen/regsterScreen.dart';
-import 'package:holy_time/ui/screens/features/chartsDigram/charts.dart';
-import 'package:holy_time/ui/screens/features/setting/setting.dart';
-import 'package:holy_time/ui/screens/features/slider/event/event.dart';
-import 'package:holy_time/ui/screens/features/slider/task/task.dart';
-import 'package:holy_time/ui/screens/features/slider/teem/teem.dart';
+import 'package:holy_time/ui/screens/features/featuresHomeScreenUsers/chartsDigram/charts.dart';
+import 'package:holy_time/ui/screens/features/featuresHomeScreenUsers/setting/setting.dart';
+import 'package:holy_time/ui/screens/features/featuresHomeScreenUsers/slider/event/event.dart';
+import 'package:holy_time/ui/screens/features/featuresHomeScreenUsers/slider/task/task.dart';
+import 'package:holy_time/ui/screens/features/featuresHomeScreenUsers/slider/teem/teem.dart';
 import 'package:holy_time/ui/screens/homeScreen/homeScreenLeaders.dart';
 import 'package:holy_time/ui/screens/homeScreen/homeScreenUsers.dart';
 import 'package:holy_time/ui/screens/splashScreen/splashScreen.dart';

@@ -1,10 +1,10 @@
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:holy_time/ui/screens/features/slider/event/event.dart';
 import 'package:holy_time/utilites/appAssets.dart';
 
 import 'designCard/designCard.dart';
+import 'event/event.dart';
 
 
 class SliderPic extends StatelessWidget {

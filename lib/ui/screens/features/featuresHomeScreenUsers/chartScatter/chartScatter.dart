@@ -20,7 +20,7 @@ class _ChartScatterState extends State<ChartScatter> {
       child: Column(
         children: [
           Container(
-            height: MediaQuery.of(context).size.height*.24,
+            height: MediaQuery.of(context).size.height*.26,
             child: AspectRatio(
               aspectRatio: 16/9,
 
