@@ -4,13 +4,13 @@ class DesignCard extends StatelessWidget {
   String titleCard = "";
   Color color = Colors.white;
   String? path;
-
-
+bool? statue;
   DesignCard({
     super.key,
     required this.titleCard,
     required this.color,
     this.path,
+this.statue=true
   });
 
   @override
@@ -40,8 +40,8 @@ class DesignCard extends StatelessWidget {
           Center(
             child: Image.asset(
               path!,
-              height: MediaQuery.of(context).size.height * .15,
-              width: MediaQuery.of(context).size.width * .15,
+              height:statue==true? MediaQuery.of(context).size.height * .15:MediaQuery.of(context).size.height * .25,
+              width: statue==true? MediaQuery.of(context).size.width * .15:MediaQuery.of(context).size.width * .25,
             ),
           ),
       ],

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:holy_time/ui/screens/auth/registerScreen/regsterScreen.dart';
+import 'package:holy_time/ui/screens/homeScreen/homeScreenLeaders.dart';
 import 'package:holy_time/ui/screens/homeScreen/homeScreenUsers.dart';
 
 import '../../../../utilites/appAssets.dart';
@@ -56,7 +57,7 @@ class LoginScreen extends StatelessWidget {
                 InkWell(
                     onTap: () {
                       Navigator.pushReplacementNamed(
-                          context, HomeScreenUsers.routeName);
+                          context, HomeScreenLeaders.routeName);
                     },
                     child: Center(
                         child: Card(
@@ -68,7 +69,7 @@ class LoginScreen extends StatelessWidget {
                                 color: Colors.blueAccent,
                               ),
                               child: const Text(
-                                "sin Up",
+                                "sign Up",
                                 style: TextStyle(
                                     fontSize: 30, color: Colors.black87),
                               )),

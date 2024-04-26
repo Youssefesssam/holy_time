@@ -16,80 +16,83 @@ class HomeScreenUsers extends StatelessWidget {
       backgroundColor: Colors.transparent,
       body: Container(
         decoration: const BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage(AppAssets.backGround), fit: BoxFit.fill)),
+          image: DecorationImage(
+            image: AssetImage(AppAssets.backGround),
+            fit: BoxFit.fill,
+          ),
+        ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Container(
-                margin: const EdgeInsets.only(
-                    left: 30, right: 30, top: 30, bottom: 10),
-                child: const AppBarUser()),
-            Container(
-                margin: const EdgeInsets.only(left: 30),
-                child: Row(
-                  children: [
-                    const Text(
-                      "Rank#",
-                      style: TextStyle(fontSize: 25),
+              margin: const EdgeInsets.only(
+                left: 30,
+                right: 30,
+                top: 30,
+                bottom: 10,
+              ),
+              child: const AppBarUser(),
+            ),
+            Stack(
+              alignment: Alignment.topCenter,
+              children: [
+                Opacity(
+                  opacity: .3,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.grey,
                     ),
-                    const Spacer(),
-                    Container(
-                      margin: const EdgeInsets.only(right: 30),
-                      child: const Text(
-                        "I attended",
-                        style: TextStyle(fontSize: 25),
-                      ),
-                    )
-                  ],
-                )),
-            Container(
-              padding: const EdgeInsets.only(left: 30, top: 10,right: 30),
-              child: Row(
-                children: [
-                  Card(
-                    elevation: 10,
-                    child: Container(
-                      decoration: BoxDecoration(
-                          color: const Color(0xffffba00),
-                          borderRadius: BorderRadius.circular(10)
-                      ),
-                      height: 50,
-                      width: 90,
-                      child: const Center(
-                          child: Text(
-                            '1#',
-                            style: TextStyle(color: Colors.white, fontSize: 25),
-                          )),
+                    margin: const EdgeInsets.symmetric(horizontal: 70),
+                    padding: const EdgeInsets.all(10),
+                    child: const Row(
+                      children: [
+                        Column(
+                          children: [
+                            Text(
+                              "1#",
+                              style: TextStyle(fontSize: 45),
+                            ),
+                            SizedBox(height: 5,),
+                            Text("Rank#"),
+                          ],
+                        ),
+
+                      ],
                     ),
                   ),
-                  const Spacer(),
-                  Card(
-                    elevation: 10,
-                    child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: const Color(0xeaf84c4c),
+                ),
+                const Positioned(
+                  right: 110,
+                  top: 20,
+                  child: Column(
+                    children: [
+                      SizedBox(
+                        width: 50, // Adjust the width as needed
+                        height: 50, // Adjust the height as needed
+                        child: CircularProgressIndicator(
+                          strokeCap: StrokeCap.round,
+                          value: 0.3,
+                          color: Color(0xff904ff2),
+                          backgroundColor: Colors.white54,
+                          strokeWidth: 9,
+                        ),
                       ),
-                      height: 50,
-                      width: 100,
-                      child: const Center(
-                          child: Text(
-                            '5%',
-                            style: TextStyle(color: Colors.white, fontSize: 25),
-                          )),
-                    ),
-                  )
-                ],
-              ),
+                      SizedBox(height: 10,),
+                      Text("Attend",style: TextStyle(color:Colors.grey),)
+                    ],
+                  ),
+                ),
+              ],
             ),
             Container(
-                margin: const EdgeInsets.only(top: 10, left: 30),
-                child: const Text(
-                  "Range attendas",
-                  textAlign: TextAlign.start,
-                  style: TextStyle(fontSize: 20),
-                )),
+              margin: const EdgeInsets.only(top: 10, left: 30),
+              child: const Text(
+                "Range attendas",
+                textAlign: TextAlign.start,
+                style: TextStyle(fontSize: 20),
+              ),
+            ),
             const SizedBox(
               height: 10,
             ),
@@ -97,18 +100,24 @@ class HomeScreenUsers extends StatelessWidget {
             Row(
               children: [
                 Container(
-                    margin: const EdgeInsets.only(left: 20, bottom: 20),
-                    child: const Text(
-                      "Contents",
-                      style: TextStyle(fontSize: 25),
-                    )),
+                  margin: const EdgeInsets.only(left: 20, bottom: 20),
+                  child: const Text(
+                    "Contents",
+                    style: TextStyle(fontSize: 25),
+                  ),
+                ),
                 Container(
-                    margin: const EdgeInsets.only(left: 5, bottom: 20),
-                    child: Image.asset("assets/icons/content.png",height: 30,width: 40,))
+                  margin: const EdgeInsets.only(left: 5, bottom: 20),
+                  child: Image.asset(
+                    "assets/icons/content.png",
+                    height: 30,
+                    width: 40,
+                  ),
+                ),
               ],
             ),
             Container(
-              margin: EdgeInsets.all(10),
+              margin: const EdgeInsets.all(10),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
               ),
@@ -116,21 +125,28 @@ class HomeScreenUsers extends StatelessWidget {
               child: Row(
                 children: [
                   Expanded(
-                      flex: 1,
-                      child: DesignCard(
-                        titleCard: "points",
-                        path:"assets/icons/best-score.png",
-                        color: Colors.black,
-                      )),
+                    flex: 1,
+                    child: DesignCard(
+                      titleCard: "points",
+                      path: AppAssets.bestScore,
+                      color: Colors.black,
+                    ),
+                  ),
                   Expanded(
-                      flex: 1,
-                      child: DesignCard(
-                          titleCard: "A Weeekly Word", color: Colors.black)),
+                    flex: 1,
+                    child: DesignCard(
+                      titleCard: "A Weeekly Word",
+                      color: Colors.black,
+                    ),
+                  ),
                   Expanded(
-                      flex: 1,
-                      child: DesignCard(
-                          path:"assets/icons/best-score.png",
-                          titleCard: "sss", color: Colors.black)),
+                    flex: 1,
+                    child: DesignCard(
+                      path: AppAssets.bestScore,
+                      titleCard: "sss",
+                      color: Colors.black,
+                    ),
+                  ),
                 ],
               ),
             ),

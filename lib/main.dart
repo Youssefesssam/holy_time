@@ -22,8 +22,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       routes: {
-        HomeScreenLeaders.routeName:(_)=>const HomeScreenLeaders(),
-        HomeScreenUsers.routeName:(_)=>const HomeScreenUsers(),
+        HomeScreenLeaders.routeName:(_)=> HomeScreenLeaders(),
+        HomeScreenUsers.routeName:(_)=> HomeScreenUsers(),
         SplashScreen.routeName:(_)=>const SplashScreen(),
         LoginScreen.routeName:(_)=>const LoginScreen(),
         RegisterScreen.routeName:(_)=>const RegisterScreen(),
@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
         TeemScreen.routeName:(_)=>const TeemScreen(),
         TaskScreen.routeName:(_)=>const TaskScreen(),
       },
-      initialRoute:SplashScreen.routeName ,// This trailing comma makes auto-formatting nicer for build methods.
+      initialRoute:HomeScreenUsers.routeName ,// This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
