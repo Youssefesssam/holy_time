@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:holy_time/ui/screens/auth/registerScreen/regsterScreen.dart';
-import 'package:holy_time/ui/screens/homeScreen/homeScreenLeaders.dart';
-import 'package:holy_time/ui/screens/homeScreen/homeScreenUsers.dart';
-
 import '../../../../utilites/appAssets.dart';
+import '../../features/featuresHomeScreenLeaders/ScreenHomeLeaders/screenHomeLeaders.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -57,7 +55,7 @@ class LoginScreen extends StatelessWidget {
                 InkWell(
                     onTap: () {
                       Navigator.pushReplacementNamed(
-                          context, HomeScreenLeaders.routeName);
+                          context, ScreenHomeLeaders.routeName);
                     },
                     child: Center(
                         child: Card(

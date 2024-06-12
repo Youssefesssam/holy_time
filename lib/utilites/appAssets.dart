@@ -21,5 +21,10 @@ static const String success = 'assets/icons/success.png';
 static const String user = 'assets/icons/user.png';
 static const String user2 = 'assets/icons/user2.png';
 static const String verifiedUser = 'assets/icons/verified-user.png';
-
+static const String teem = 'assets/icons/teem.png';
+static const String banner = 'assets/icons/banner.png';
+static const String event = 'assets/icons/event.png';
+static const String approve = 'assets/icons/approve.png';
+static const String clipboard = 'assets/icons/clipboard.png';
+static const String days = 'assets/icons/days.png';
 }

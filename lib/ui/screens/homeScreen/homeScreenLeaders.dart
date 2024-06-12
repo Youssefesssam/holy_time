@@ -1,159 +1,131 @@
 import 'package:flutter/material.dart';
+import 'package:holy_time/utilites/appAssets.dart';
+import '../features/featuresHomeScreenLeaders/ScreenHomeLeaders/screenHomeLeaders.dart';
+import '../features/featuresHomeScreenLeaders/appBarLeaders/attendManual/attendManual.dart';
+import '../features/featuresHomeScreenUsers/appBarUser/setting/setting.dart';
 
-import '../../../utilites/appAssets.dart';
-import '../features/appBarUser/appBarUser.dart';
 
-class HomeScreenLeaders extends StatelessWidget {
-  static const String routeName = "homeScreenLeaders";
 
+class HomeScreenLeaders extends StatefulWidget {
+  static const String routeName = "screenHomeLeaders";
+  const HomeScreenLeaders({super.key,});
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.transparent,
-      body: Container(
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage(AppAssets.backGround),
-            fit: BoxFit.fill,
-          ),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Container(
-              margin: const EdgeInsets.only(
-                left: 30,
-                right: 30,
-                top: 30,
-                bottom: 10,
-              ),
-              child: const AppBarUser(),
-            ),
-            const Text(
-              "Attendance List",
-              textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 30),
-            ),
-            Expanded(
-                child: ListView.builder(
-                    itemCount: 10,
-                    itemBuilder: (BuildContext context, int index) {
-                      if (index % 2 == 0) {
-                        return AttendCard(co: false);
-                      } else {
-                        return AttendCard(co: true);
-                      }
-                    }))
-          ],
-        ),
-      ),
-      /*bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Color(0xffd8d8da),
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            label: 'Search',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.account_circle),
-            label: 'Profile',
-          ),
-        ],
-        currentIndex: 0, // Set the initial index of the selected item
-        selectedItemColor: Colors.blue,
-        onTap: (int index) {
-          // Handle navigation to different tabs here
-        },
-      ),*/
-    );
-  }
+  _HomeScreenLeaders createState() => _HomeScreenLeaders();
 }
-
-class AttendCard extends StatelessWidget {
-  bool? co;
-
-  AttendCard({this.co});
-
+class _HomeScreenLeaders extends State<HomeScreenLeaders> {
+  int currentTapIndex = 0;
+  List <Widget> screen =[ ScreenHomeLeaders(),const Setting()];
+  Widget currentTab = ScreenHomeLeaders();
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Card(
-          color: co == true
-              ? Colors.white.withOpacity(.5)
-              : Colors.grey.withOpacity(.5),
-          child: const Column(
-            children: [
-              Padding(
-                padding: EdgeInsets.all(10),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    CircleAvatar(
-                      radius: 30,
-                      backgroundImage: AssetImage(AppAssets.profile),
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
-                      "Tantoon",
-                      style: TextStyle(fontSize: 25),
-                    )
-                  ],
-                ),
-              ),
+    return Container(
+      decoration:  const BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage(AppAssets.backGround),fit: BoxFit.fill
+          )
+      ),
+      child:  Scaffold(
+        appBar: AppBar(
 
-            ],
-          ),
-        ),
-        SizedBox(
-          width: 10,
-        ),
-        Container(
-          height: 200,
-          width: 200,
-          child: Card(
-            color: co == false
-                ? Colors.white.withOpacity(.5)
-                : Colors.grey.withOpacity(.5),
-            child: const Column(
-              children: [
-                Padding(
-                  padding: EdgeInsets.all(10),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+          title: Row(
+              children:[
+
+                const Spacer(),
+                 const Text("list Users",
+                  style: TextStyle(fontWeight: FontWeight.bold,fontSize: 25),),
+                const Spacer(),
+                InkWell(
+                  onTap: (){
+                    Navigator.pushNamed(context, AttendManual.routeName);
+                  },
+                  child: Container(
+                    margin: const EdgeInsets.all(5),
+                    child: const Column(
+                      children: [
+                        Icon(Icons.man,size: 35,),
+                        SizedBox(width:10,),
+                        Text("Manual",style: TextStyle(fontSize: 12),)
+                      ],
+                    ),
+                  ),
+                ),
+                Container(
+                  margin: const EdgeInsets.all(5),
+                  child: const Column(
                     children: [
-                      CircleAvatar(
-                        radius: 30,
-                        backgroundImage: AssetImage(AppAssets.profile),
-                      ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Text(
-                        "Tantoon",
-                        style: TextStyle(fontSize: 25),
-                      )
+                      Icon(Icons.qr_code_scanner_outlined,size: 35,),
+                      SizedBox(width:10,),
+                      Text("Qr code",style: TextStyle(fontSize: 12),),
                     ],
                   ),
                 ),
-                Padding(
-                  padding: EdgeInsets.all(10),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [],
-                  ),
-                ),
-              ],
-            ),
+
+              ]
           ),
+
+          toolbarHeight: (65),
+          backgroundColor:const Color(0x44aaaaff),
+
         ),
-      ],
+        backgroundColor:Colors.transparent ,
+        bottomNavigationBar: bildBottomNavigation(),
+        body: currentTab,
+
+      ),
     );
   }
+
+
+  Widget bildBottomNavigation()=> Container(
+    margin: EdgeInsets.all(10),
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(40),
+    ),
+    child: ClipRRect(
+      borderRadius: BorderRadius.circular(40),
+      child: BottomNavigationBar(
+        backgroundColor: Colors.transparent,
+          selectedItemColor:  Colors.teal,
+          items: [
+            BottomNavigationBarItem(
+              icon: _buildIconWithGlow(Icons.list, currentTapIndex == 0),
+              label: 'List',
+            ),
+            BottomNavigationBarItem(
+              icon: _buildIconWithGlow(Icons.settings, currentTapIndex == 1),
+              label: 'Settings',
+            ),
+          ],
+          currentIndex: currentTapIndex,
+          onTap:(index){
+            currentTapIndex=index;
+            currentTab = screen[currentTapIndex];
+            setState((){});
+          } ,
+
+        ),
+    ),
+  );
+  BottomNavigationBarItem bottomNavigationBarItem(
+      IconData imagepath,String text
+      ) => BottomNavigationBarItem(icon:Icon(imagepath,size: 30,) ,label: text ,) ;
 }
+Widget _buildIconWithGlow(IconData icon, bool isSelected) {
+  return Stack(
+    alignment: Alignment.center,
+    children: [
+      AnimatedContainer(
+        duration: Duration(milliseconds: 300),
+        width: isSelected ? 60.0 : 0.0,
+        height: isSelected ? 60.0 : 0.0,
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          color: isSelected ? Colors.teal.withOpacity(0.3) : Colors.transparent,
+        ),
+      ),
+      Icon(size: 30,icon, color: isSelected ? Colors.teal : Colors.black),
+    ],
+  );
+}
+
+

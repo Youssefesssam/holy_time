@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:holy_time/ui/screens/features/appBarUser/appBarUser.dart';
-import 'package:holy_time/ui/screens/features/slider/designCard/designCard.dart';
 import '../../../utilites/appAssets.dart';
-import '../features/chartScatter/chartScatter.dart';
-import '../features/slider/slide.dart';
-
+import '../features/featuresHomeScreenUsers/appBarUser/appBarUsers/appBarUser.dart';
+import '../features/featuresHomeScreenUsers/bodyScreenUsers/bottomAppBarUsers/bottomAppBarUsers.dart';
+import '../features/featuresHomeScreenUsers/bodyScreenUsers/chartScatter/chartScatter.dart';
+import '../features/featuresHomeScreenUsers/bodyScreenUsers/slider/designCard/designCard.dart';
+import '../features/featuresHomeScreenUsers/bodyScreenUsers/slider/slide.dart';
 class HomeScreenUsers extends StatelessWidget {
   const HomeScreenUsers({super.key});
 
@@ -16,104 +16,53 @@ class HomeScreenUsers extends StatelessWidget {
       backgroundColor: Colors.transparent,
       body: Container(
         decoration: const BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage(AppAssets.backGround),
-            fit: BoxFit.fill,
-          ),
-        ),
+            image: DecorationImage(
+                image: AssetImage(AppAssets.backGround), fit: BoxFit.fill)),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Container(
-              margin: const EdgeInsets.only(
-                left: 30,
-                right: 30,
-                top: 30,
-                bottom: 10,
-              ),
-              child: const AppBarUser(),
-            ),
-            Stack(
-              alignment: Alignment.topCenter,
-              children: [
-                Opacity(
-                  opacity: .3,
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Colors.grey,
-                    ),
-                    margin: const EdgeInsets.symmetric(horizontal: 70),
-                    padding: const EdgeInsets.all(10),
-                    child: const Row(
-                      children: [
-                        Column(
-                          children: [
-                            Text(
-                              "1#",
-                              style: TextStyle(fontSize: 45),
-                            ),
-                            SizedBox(height: 5,),
-                            Text("Rank#"),
-                          ],
-                        ),
+                margin: const EdgeInsets.only(
+                    left: 30, right: 30, top: 30, bottom: 10),
+                child: const AppBarUser()),
 
-                      ],
-                    ),
-                  ),
-                ),
-                const Positioned(
-                  right: 110,
-                  top: 20,
-                  child: Column(
-                    children: [
-                      SizedBox(
-                        width: 50, // Adjust the width as needed
-                        height: 50, // Adjust the height as needed
-                        child: CircularProgressIndicator(
-                          strokeCap: StrokeCap.round,
-                          value: 0.3,
-                          color: Color(0xff904ff2),
-                          backgroundColor: Colors.white54,
-                          strokeWidth: 9,
-                        ),
-                      ),
-                      SizedBox(height: 10,),
-                      Text("Attend",style: TextStyle(color:Colors.grey),)
-                    ],
-                  ),
-                ),
-              ],
-            ),
+
+            const bottomAppBarUsers(),
+
+
             Container(
               margin: const EdgeInsets.only(top: 10, left: 30),
-              child: const Text(
-                "Range attendas",
-                textAlign: TextAlign.start,
-                style: TextStyle(fontSize: 20),
+              child: Row(
+                children: [
+                  const Text(
+                    "Range attendas",
+                    textAlign: TextAlign.start,
+                    style: TextStyle(fontSize: 20),
+                  ),
+                  Image.asset(AppAssets.rank,height: 30,width: 40,)
+                ],
+
               ),
             ),
+
+
+
+
             const SizedBox(
               height: 10,
             ),
-            const Expanded(flex: 5, child: ChartScatter()),
+             Expanded(flex: 5, child: ChartScatter()),
             Row(
               children: [
                 Container(
-                  margin: const EdgeInsets.only(left: 20, bottom: 20),
-                  child: const Text(
-                    "Contents",
-                    style: TextStyle(fontSize: 25),
-                  ),
-                ),
+                    margin: const EdgeInsets.only(left: 20, bottom: 20),
+                    child: const Text(
+                      "Contents",
+                      style: TextStyle(fontSize: 25),
+                    )),
                 Container(
-                  margin: const EdgeInsets.only(left: 5, bottom: 20),
-                  child: Image.asset(
-                    "assets/icons/content.png",
-                    height: 30,
-                    width: 40,
-                  ),
-                ),
+                    margin: const EdgeInsets.only(left: 5, bottom: 20),
+                    child: Image.asset(AppAssets.content,height: 30,width: 40,))
               ],
             ),
             Container(
@@ -125,28 +74,21 @@ class HomeScreenUsers extends StatelessWidget {
               child: Row(
                 children: [
                   Expanded(
-                    flex: 1,
-                    child: DesignCard(
-                      titleCard: "points",
-                      path: AppAssets.bestScore,
-                      color: Colors.black,
-                    ),
-                  ),
+                      flex: 1,
+                      child: DesignCard(
+                        titleCard: "Score",
+                        path:AppAssets.bestScore,
+                        color: Colors.black,
+                      )),
                   Expanded(
-                    flex: 1,
-                    child: DesignCard(
-                      titleCard: "A Weeekly Word",
-                      color: Colors.black,
-                    ),
-                  ),
+                      flex: 1,
+                      child: DesignCard(
+                          titleCard: "A Word", color: Colors.black,path: AppAssets.days,)),
                   Expanded(
-                    flex: 1,
-                    child: DesignCard(
-                      path: AppAssets.bestScore,
-                      titleCard: "sss",
-                      color: Colors.black,
-                    ),
-                  ),
+                      flex: 1,
+                      child: DesignCard(
+                          path:AppAssets.giveAway,
+                          titleCard: "Gift", color: Colors.black)),
                 ],
               ),
             ),
